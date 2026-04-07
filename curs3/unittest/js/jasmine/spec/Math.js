@@ -4,10 +4,22 @@ describe("helloWorld", () => {
     var actual = helloWorld();
     expect(actual).toBe("Hello World");
   });
-  it("returns Hello ", () => {
-    var actual = helloWorld();
-    expect(actual).toContain("Hello");
-  });
+  // it("returns Hello ", () => {
+  //   var actual = helloWorld("Hello");
+  //   expect(actual).toContain("Hello");
+  // });
+  // it("returns World ", () => {
+  //   var actual = helloWorld("World");
+  //   expect(actual).toContain("World");
+  // });
+  // it("returns not empty ", () => {
+  //   var actual = helloWorld("Test");
+  //   expect(actual).not.toBe("");
+  // });
+  // it("returns not Hello World ", () => {
+  //   var actual = helloWorld();
+  //   expect(actual).not.toBe("Hello World !");
+  // });
 });
 
 describe("math sum", function () {
@@ -17,10 +29,13 @@ describe("math sum", function () {
     expect(sum(3, 5)).toBe(8);
   });
 });
-describe("math sum2", function () {
+describe("math sum 2", function () {
   //Spec for sum operation
-  it("suma dintre 1.4 si 1.3", function () {
+  it("suma dintre 0.1 si 0.7", function () {
     expect(sum(0.1, 0.7)).toEqual(0.8);
+  });
+  it("suma dintre 1.4 si 1.3", function () {
+    expect(sum(1.4, 1.3)).toEqual(2.7);
   });
 });
 

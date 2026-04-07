@@ -1,7 +1,9 @@
-function helloWorld() {
-  return "Hello World";
+// function helloWorld(str) {
+//   return str ? str : "Hello World";
+// }
+function helloWorld(str = "Hello World") {
+  return str;
 }
-
 function sum(number1, number2) {
   number1 = number1 * 100;
   number2 = number2 * 100;
@@ -9,7 +11,9 @@ function sum(number1, number2) {
   sum = sum / 100;
   return Number(sum.toFixed(2));
 }
-
+// function sum(number1, number2) {
+//   return number1 + number2;
+// }
 function dif(number1, number2) {
   return number1 - number2;
 }
