@@ -12,27 +12,29 @@
     <script>
         class Animal {
             constructor(legs) {
-                if(typeof legs !== 'undefined'){
+                if (typeof legs !== 'undefined') {
                     this.legs = legs;
                 }
-                else{
+                else {
                     throw 'Error : legs must be defined'
                 }
-                    
+
             }
             walk() {
                 console.log('walking on ' + this.legs + ' legs');
             }
         }
         class Bird extends Animal {
-            constructor(legs) { 
+            constructor(legs, name) {
                 //daca se definsete costructorul in clasa copil nu se mai apeleaza automat 
                 //constructorul din clasa parinte 
                 //ca sa apelez constructorul din clasa parinte folosin super();
                 super(legs); // apelez constructorul din clasa parinte
+                this.name = name;
+
             }
-            fly() { 
-                console.log('flying'); 
+            fly() {
+                console.log(`${this.name} is flying`);
             }
         }
         class Pinguin extends Bird {
@@ -43,13 +45,13 @@
                 console.log(' penguins do not fly, they swim');
             }
         }
-        // let bird = new Bird(2);
-        // bird.walk();
-        // bird.fly();
+        let bird = new Bird(2, 'Parrot');
+        bird.walk();
+        bird.fly();
 
-        let pinguin = new Pinguin();  // corect new Pinguin(2);
-        pinguin.walk();
-        pinguin.fly();
+        // let pinguin = new Pinguin();  // corect new Pinguin(2);
+        // pinguin.walk();
+        // pinguin.fly();
     </script>
 </body>
 

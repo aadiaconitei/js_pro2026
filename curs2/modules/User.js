@@ -1,12 +1,16 @@
-class User{
-    constructor(id,nume,email, varsa){
-        //setam proprietatile
+class User {
+    constructor(id, nume, email, varsa) {
+        this.id = id;
+        this.nume = nume;
+        this.email = email;
+        this.varsa = varsa;
+
     }
-    mananca (claorii){
+    mananca(claorii) {
         console.log(`Mananca ${claorii} pe zi.`);
     }
-    doarme(ore){
+    doarme(ore) {
         console.log(`Doarme ${ore} pe zi`);
     }
 }
-export {User}
+export { User }

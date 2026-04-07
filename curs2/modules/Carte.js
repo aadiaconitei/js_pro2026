@@ -1,9 +1,10 @@
-class Carte{
-    constructor(titlu){
+class Carte {
+    constructor(titlu) {
         this.titlu = titlu;
+        console.log('Constructorul  MyCarte a fost apelat');
     }
-    deschidCartea(){
+    deschidCartea() {
         console.log('Am deschis cartea la pagina 43');
     }
 }
-export {Carte}
+export { Carte as MyCarte }; 
