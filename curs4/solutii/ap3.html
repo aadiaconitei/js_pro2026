@@ -10,8 +10,8 @@
 <body>
     <h2>getElementById</h2>
 
-    <p id="myid"></p>
-    <!-- <p id="myid2"></p> -->
+    <p id="myid">aaaaa</p>
+    <p id="myid">bbbbbb</p>
     Este important sa efectuam navigarea dupa introducerea elementelor HTML, nu înainte de aceasta
 
     <h2>getElementsByTagName</h2>
@@ -80,14 +80,20 @@
         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <script>
-        function coloreaza(p_selectat) {
-            p_selectat.style.color = "red";
+        function coloreaza(p_selectat, culoare) {
+            p_selectat.style.color = culoare;
         }
         var toate_parag = document.getElementsByTagName("p");
         alert(toate_parag.length);
         for (var i = 0; i < toate_parag.length; i++) {
-            if (i == 1) {
-                coloreaza(toate_parag[i])
+            if (i == 1 || i == 8) {
+                coloreaza(toate_parag[i], "red");
+            }
+            if (i == 4) {
+                coloreaza(toate_parag[i], "blue");
+            }
+            if (i == 7) {
+                coloreaza(toate_parag[i], "#e3e3e3");
             }
         }
 

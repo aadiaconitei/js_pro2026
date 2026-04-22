@@ -79,23 +79,33 @@
             p_selectat.style.color = "red";
         }
         //returneaza stativ nodelist
-        var toate_parag = document.querySelectorAll("p");
-        alert(toate_parag.length);
+        // var toate_parag = document.querySelectorAll("p");
+        // alert(toate_parag.length);
 
+        // const myp = document.createElement("p");
+        // const mytext = document.createTextNode(' pargraf demo ');
+        // myp.appendChild(mytext);
+        // myp.setAttribute("class",'demo');
+        // const mybody = document.getElementsByTagName("body")[0];
+        // mybody.appendChild(myp);
+
+        // alert(toate_parag.length);
+        // for (var i = 0; i < toate_parag.length; i++) {
+        //     if(i==1 || i== 4 || i ==7){
+        //         coloreaza(toate_parag[i])
+        //     }
+        // }
+
+        //returneaza live nodelist
+        let toate_parag = document.getElementsByTagName("p");
+        alert(toate_parag.length);
         const myp = document.createElement("p");
         const mytext = document.createTextNode(' pargraf demo ');
         myp.appendChild(mytext);
-        myp.setAttribute("class",'demo');
+        myp.setAttribute("class", 'demo');
         const mybody = document.getElementsByTagName("body")[0];
         mybody.appendChild(myp);
-
         alert(toate_parag.length);
-        for (var i = 0; i < toate_parag.length; i++) {
-            if(i==1 || i== 4 || i ==7){
-                coloreaza(toate_parag[i])
-            }
-        }
-
     </script>
 
 </body>
