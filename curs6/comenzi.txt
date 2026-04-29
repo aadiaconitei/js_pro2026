@@ -35,7 +35,7 @@ npm i bootstrap bootstrap-icons jquery @popperjs/core autoprefixer
 mkdir -p dist src/assets/scss src/assets/images src/js/components src/js/contexts src/types
 
 6. Fisiere de baza (TypeScript)
-touch webpack.config.js tsconfig.json
+touch webpack.config.js
 touch src/index.html
 touch src/index.ts src/about.ts
 touch src/assets/scss/styles.scss
