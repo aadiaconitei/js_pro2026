@@ -7,12 +7,12 @@ function diff(a, b) {
 function product(a, b) {
     return a * b;
 }
-module.exports = {
-    sum, diff, product
-}
+// module.exports = {
+//     sum, diff, product
+// }
 
 // sau
-// export default { sum, diff, product }
+export default { sum, diff, product }
 
 
 // node calculator.js

@@ -14,6 +14,6 @@ let adunare = (a, b) => {
 }
 
 // 2. apelam functia
-console.log("Suma dintre 24 si 46 este", adunare(24, 46));
+console.log("Suma dintre 24 si 46 este", adunare(35, 45));
 
 // 3. in terminal rulam comanda: node ex1.js sau nodemon ex1.js daca modulul nodemon este instalat

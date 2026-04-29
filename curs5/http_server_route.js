@@ -11,41 +11,48 @@ const defaultHeaders = {
 };
 
 const routes = {
-    '/': function index (request, response) {
-    response.writeHead(200, {
-        'Content-Type': 'text/plain; charset=utf-8',
-        ...defaultHeaders
-    });
-    response.end('Hello, World!');
+    '/': function index(request, response) {
+        response.writeHead(200, {
+            'Content-Type': 'text/plain; charset=utf-8',
+            ...defaultHeaders
+        });
+        response.end('Hello, World!');
     },
-    '/about': function about (request, response) {
-    response.writeHead(200, {
-        'Content-Type': 'text/plain; charset=utf-8',
-        ...defaultHeaders
-    });
-    response.end('You are now viewing "about"');
+    '/about': function about(request, response) {
+        response.writeHead(200, {
+            'Content-Type': 'text/plain; charset=utf-8',
+            ...defaultHeaders
+        });
+        response.end('You are now viewing "about"');
     },
-    '/blog': function about (request, response) {
+    '/about/contact': function about(request, response) {
+        response.writeHead(200, {
+            'Content-Type': 'text/plain; charset=utf-8',
+            ...defaultHeaders
+        });
+        response.end('You are now viewing "about/contact"');
+    },
+    '/blog': function about(request, response) {
         response.writeHead(200, {
             'Content-Type': 'text/plain; charset=utf-8',
             ...defaultHeaders
         });
         response.end('You are now viewing "Blog"');
     },
-    '/api': function api (request, response) {
+    '/api': function api(request, response) {
         response.writeHead(200, {
             'Content-Type': 'application/json; charset=utf-8',
             ...defaultHeaders
         });
         response.end(JSON.stringify(data));
     }
-   }
+}
 
 
 // Start server 
 // req - cererile catre seerver: requests
 // res - raspunsurile serverului: responses
-let server = http.createServer( function (req, res) {
+let server = http.createServer(function (req, res) {
     if (req.url in routes) {
         return routes[req.url](req, res);
     }
@@ -56,9 +63,9 @@ let server = http.createServer( function (req, res) {
     res.end(http.STATUS_CODES[404])
 
 });
-server.listen(port, host, () => { 
-    console.log(`Server is running on http://${host}:${port}`); 
-   }); 
+server.listen(port, host, () => {
+    console.log(`Server is running on http://${host}:${port}`);
+});
 
 // 1. pornim serverul
 // node http_server.js 

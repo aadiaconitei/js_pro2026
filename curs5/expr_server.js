@@ -15,12 +15,14 @@
 const express = require('express')
 const app = express()
 // Parses the body for POST, PUT, DELETE, etc.
+const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // GET
 app.get('/', (req, res) => res.send('Hello World!'))
 
 // app.get('/blog', (req, res) => res.render('blog.html'))
+app.get('/blog', (req, res) => res.sendFile(__dirname + '/blog.html'))
 
 
 // POST
@@ -39,7 +41,7 @@ app.delete('/user', function (req, res) {
   res.send('DELETE request la /user')
 })
 app.listen(
-    3002,  //PORT
-    () => console.log('Aplicatie ce ruleaza pe portul 3002!')
+  3002,  //PORT
+  () => console.log('Aplicatie ce ruleaza pe portul 3002!')
 )
 

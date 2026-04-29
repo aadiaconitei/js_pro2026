@@ -104,12 +104,12 @@ $(document).ready(function ($) {
         let ajxReq = $.ajax({
             type: 'PUT',
             data: {
-                "name": "Nume editat",
-                "password": "parolaeditat",
-                "profession": "profesieeditat",
+                "name": "Nume editat2233",
+                "password": "parolaeditat2233",
+                "profession": "profesieeditat2233",
                 "id": 1
             },
-            url: 'http://localhost:3001/users/1'
+            url: 'http://localhost:3001/users/2'
         });
 
         ajxReq.success(function (data, status, jqXhr) {

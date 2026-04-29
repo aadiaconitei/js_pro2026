@@ -2,7 +2,7 @@
 // folosim  require ('nume_modul');
 
 const http = require('http');  // includem modulul http
-const port = 3001;  // setam un port pentru server ( Recomandate: diferit de 80, 443, 8080)
+const port = 3002;  // setam un port pentru server ( Recomandate: diferit de 80, 443, 8080)
 const host = 'localhost'
 // Start server 
 // req - cererile catre seerver: requests

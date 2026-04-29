@@ -1,10 +1,13 @@
-console.log(process.argv);
+// console.log(process.argv);
 
 var sum = 0;
 for (i = 2; i < process.argv.length; i++) {
     sum += Number(process.argv[i]);
+    console.log(sum);
 }
-console.log(sum);
+
+
+console.log(`Suma dintre ${process.argv[2]} si ${process.argv[3]} este ${sum}`);
 
 // node ex1_1.js 24 46
 
