@@ -149,7 +149,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:
-    transform 1.5s ease-in-out,
-    opacity 1.5s ease-in-out; /* Durata animației */
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out; /* Durata animației */
 }
